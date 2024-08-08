@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+:root {
+    /* Primary */
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral */
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: var(--Pale-blue);
+    background-image: url(images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+}
+main{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: minmax(auto, 400px);
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    height: auto;
+    border-radius: 1rem;
+    background-color: white;
+    display: grid;
+    margin-top: 150px;
+    margin-bottom: 50px;
+}
+.container img{
+    width: 100%;
+    border-radius: 1rem 1rem 0 0;
+}
+.details {
+    text-align: center;
+    font-family: "Red Hat Display", sans-serif;
+    font-optical-sizing: auto;
+    display: grid;
+    gap: 1rem;
+    padding: 3rem 3rem 2rem 3rem;
+}
+.details h2{
+    font-weight: 800;
+    font-style: normal;
+    color: var(--Dark-blue);
+}
+.details p{
+    color: var(--Desaturated-blue);
+}
+.plan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(224, 232, 255, 0.2);
+    padding: 1.2rem;
+    border-radius: 0.5rem;
+}
+.plan a{
+    color: var(--Bright-blue);
+    font-weight: 600;
+}
+.annual{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.annual img{
+    width: 40px;
+}
+.annual_text p:nth-child(1){
+    color: var(--Dark-blue);
+    font-weight: 800;
+}
+.details button{
+    padding: 1rem;
+    border: none;
+    border-radius: 0.5rem;
+    background-color: var(--Bright-blue);
+    color: white;
+    box-shadow: 0 17px 8px hsla(245, 75%, 52%, 0.2);
+    font-weight: 800;
+}
+.details button:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+.details a{
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 700;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+@media (max-width: 375px) {
+    body{
+        background-image: url(images/pattern-background-mobile.svg);
+    }
+    main{
+        grid-template-columns: minmax(auto, 350px);
+    }
+    .details p, .plan a, .annual_text p{
+        font-size: 0.85rem;
+    }
+    .details h2{
+        font-size: 1.5rem;
+    }
+}
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    padding-bottom: 20px;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+    text-decoration: none;
+}
